@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Footer from "./components/layout/Footer"
 import NavBar from "./components/layout/NavBar"
 import Home from "./components/pages/Home"
+import PigeonDetails from "./components/pages/PigeonDetails"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <main className="container mx-auto px-12 pb-12 bg-primary">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/my-pigeons/:id" element={<PigeonDetails />} />
           </Routes>
         </main>
         <Footer />
