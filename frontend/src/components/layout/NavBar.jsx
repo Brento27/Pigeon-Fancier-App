@@ -4,15 +4,17 @@ function Navbar() {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">Pigeons</a>
+        <a href="/" className="btn btn-ghost normal-case text-xl">
+          Pigeons
+        </a>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <a>About</a>
+            <a href="/about">About</a>
           </li>
           <li tabindex="0">
-            <a>
+            <a href="/my-pigeons">
               My-pigeons
               <svg
                 className="fill-current"
@@ -26,15 +28,15 @@ function Navbar() {
             </a>
             <ul className="p-2 bg-base-100">
               <li>
-                <a>Breeding</a>
+                <a href="/my-pigeons/breeding">Breeding</a>
               </li>
               <li>
-                <a>Racing</a>
+                <a href="/my-pigeons/racing">Racing</a>
               </li>
             </ul>
           </li>
           <li>
-            <a>SignIn</a>
+            <a href="/login">SignIn</a>
           </li>
         </ul>
       </div>
