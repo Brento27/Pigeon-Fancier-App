@@ -1,20 +1,20 @@
-import React from "react"
+import React, { Link } from "react-router-dom"
 
 function Navbar() {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a href="/" className="btn btn-ghost normal-case text-xl">
+        <Link to="/" className="btn btn-ghost normal-case text-xl">
           Pigeons
-        </a>
+        </Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </li>
-          <li tabindex="0">
-            <a href="/my-pigeons">
+          <li tabIndex="0">
+            <Link to="/my-pigeons">
               My-pigeons
               <svg
                 className="fill-current"
@@ -25,18 +25,18 @@ function Navbar() {
               >
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
-            </a>
+            </Link>
             <ul className="p-2 bg-base-100">
               <li>
-                <a href="/my-pigeons/breeding">Breeding</a>
+                <Link to="/my-pigeons/breeding">Breeding</Link>
               </li>
               <li>
-                <a href="/my-pigeons/racing">Racing</a>
+                <Link to="/my-pigeons/racing">Racing</Link>
               </li>
             </ul>
           </li>
           <li>
-            <a href="/login">SignIn</a>
+            <Link to="/login">SignIn</Link>
           </li>
         </ul>
       </div>
