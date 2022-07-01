@@ -47,6 +47,22 @@ const Pigeons = [
     loft: "BlouBand",
     strain: "Jansen",
   },
+  {
+    id: 4,
+    union: "ZA",
+    letters: "KPF",
+    ringNo: "004",
+    year: "2023",
+    sex: "C",
+    colour: "BB",
+    dam: 2,
+    sire: 1,
+    name: "Drake",
+    img: "http://kippenjungle.nl/layeredimage.php?ext=GIF&flip=Y&pic=pigeon/blackbar-blue.GIF",
+    desc: "Cock with the most points in KPF federation in 2022 and 2023",
+    loft: "BlouBand",
+    strain: "Jansen",
+  },
 ]
 
 const Lofts = [
