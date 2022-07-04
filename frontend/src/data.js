@@ -12,7 +12,7 @@ const Pigeons = [
     name: "Panamor",
     img: "http://kippenjungle.nl/layeredimage.php?ext=GIF&flip=Y&pic=pigeon/blackbar-blue.GIF",
     desc: "Amazing Vercammen Cock",
-    loft: "BlouBand",
+    loftId: "1",
     strain: "Jansen",
   },
   {
@@ -28,7 +28,7 @@ const Pigeons = [
     name: "Spirit",
     img: "http://kippenjungle.nl/layeredimage.php?ext=GIF&flip=N&pic=pigeon/blackcheck-blue.GIF",
     desc: "Dam to many great KPF racers",
-    loft: "BlouBand",
+    loftId: "1",
     strain: "Jansen",
   },
   {
@@ -44,7 +44,7 @@ const Pigeons = [
     name: "Storm",
     img: "http://kippenjungle.nl/layeredimage.php?ext=GIF&flip=Y&pic=pigeon/blackbar-blue.GIF",
     desc: "Cock with the most points in KPF federation in 2022 and 2023",
-    loft: "BlouBand",
+    loftId: "1",
     strain: "Jansen",
   },
   {
@@ -60,7 +60,7 @@ const Pigeons = [
     name: "Drake",
     img: "http://kippenjungle.nl/layeredimage.php?ext=GIF&flip=Y&pic=pigeon/blackbar-blue.GIF",
     desc: "Cock with the most points in KPF federation in 2022 and 2023",
-    loft: "BlouBand",
+    loftId: "1",
     strain: "Jansen",
   },
 ]
@@ -71,6 +71,11 @@ const Lofts = [
     name: "BlouBand",
     fancier: "Franco Lombaard",
     strains: "Jansen",
+    email: "franco@example.com",
+    phone: "123456789",
+    club: "BPK",
+    registerYear: "2006",
+    slogan: "Breeding Winners",
   },
 ]
 
