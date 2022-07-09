@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect } from "react"
 import PigeonCard from "../shared/PigeonCard"
 
 function Home({ pigeons, setCurrPigeon }) {

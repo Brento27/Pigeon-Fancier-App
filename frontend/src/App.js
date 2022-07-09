@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Footer from "./components/layout/Footer"
 import NavBar from "./components/layout/NavBar"
@@ -8,10 +8,21 @@ import PigeonDetails from "./components/pages/PigeonDetails"
 import { Pigeons, Lofts } from "./data"
 
 function App() {
-  const [pigeons, setPigeons] = useState(Pigeons)
+  const [pigeons, setPigeons] = useState([])
   const [currPigeon, setCurrPigeon] = useState({})
   const [lofts, setLofts] = useState(Lofts)
   const [currLofts, setCurrLofts] = useState({})
+
+  useEffect(() => {
+    fetchPigeons()
+  }, [])
+
+  const fetchPigeons = async () => {
+    const response = await fetch("/pigeons")
+    const data = await response.json()
+
+    setPigeons(data)
+  }
 
   return (
     <Router>
