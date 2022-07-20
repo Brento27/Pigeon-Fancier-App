@@ -48,6 +48,18 @@ router.patch('/:id', getPigeon, async (req, res) => {
   if (req.body.sex != null) {
     res.pigeon.sex = req.body.sex;
   }
+  if (req.body.year != null) {
+    res.pigeon.year = req.body.year;
+  }
+  if (req.body.colour != null) {
+    res.pigeon.colour = req.body.colour;
+  }
+  if (req.body.dam != null) {
+    res.pigeon.dam = req.body.dam;
+  }
+  if (req.body.sire != null) {
+    res.pigeon.sire = req.body.sire;
+  }
   try {
     const updatedPigeon = await res.pigeon.save();
     res.json(updatedPigeon);
