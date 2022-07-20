@@ -1,24 +1,26 @@
-GET http://localhost:3000/subscribers
+GET http://localhost:3000/pigeons
 
 ###
-GET http://localhost:3000/subscribers/62d7c1080ab31d116462aa59
+GET http://localhost:3000/pigeons/62d81c1f8dd2e1344edd36f3
 
 ###
-POST http://localhost:3000/subscribers
+POST http://localhost:3000/pigeons
 Content-Type: application/json
 
 {
-    "name": "Brent",
-    "subscribedToChannel": "Web dev"
+    "loftName": "BlouBand",
+    "letters": "ZAOPK",
+    "ringNo": "227",
+    "sex": "C"
 }
 
 ###
-DELETE http://localhost:3000/subscribers/62d7c1080ab31d116462aa59
+DELETE http://localhost:3000/pigeons/62d81c1f8dd2e1344edd36f3
 
 ###
-PATCH http://localhost:3000/subscribers/62d7c85dc4e519d15b0bbe13
+PATCH http://localhost:3000/pigeons/62d81c1f8dd2e1344edd36f3
 Content-Type: application/json
 
 {
-    "name": "Test"
+    "loftName": "BloubandA"
 }

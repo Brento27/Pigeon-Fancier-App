@@ -45,7 +45,7 @@ function RaceImport() {
               <thead>
                 <tr>
                   <th>Pos</th>
-                  <th>Fancier</th>
+                  <th>Loft</th>
                   <th>Letters</th>
                   <th>RingNo</th>
                   <th>Sex</th>
