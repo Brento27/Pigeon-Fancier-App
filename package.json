@@ -1,0 +1,27 @@
+{
+  "name": "bloubandhokke",
+  "version": "1.0.0",
+  "description": "server",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brento27/Pigeon-Fancier-App.git"
+  },
+  "author": "Brent Lombaard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brento27/Pigeon-Fancier-App/issues"
+  },
+  "homepage": "https://github.com/Brento27/Pigeon-Fancier-App#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.5"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19"
+  }
+}

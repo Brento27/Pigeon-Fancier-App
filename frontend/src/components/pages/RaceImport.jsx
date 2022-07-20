@@ -54,12 +54,12 @@ function RaceImport() {
                   <th>Var</th>
                   <th>Clock Time</th>
                   <th>To Win</th>
-                  <th>Velocity</th>
+                  <th>Velocity (m/m)</th>
                 </tr>
               </thead>
               <tbody>
                 {pigeons.map((pigeon) => (
-                  <tr className=''>
+                  <tr className='' key={pigeon.Pos}>
                     <td className=''>{pigeon.Pos}</td>
                     <td>{pigeon.Fancier}</td>
                     <td>{pigeon.Letters}</td>
@@ -70,7 +70,7 @@ function RaceImport() {
                     <td>{pigeon.Var}</td>
                     <td>{pigeon.Clock_Time}</td>
                     <td>{pigeon.To_Win}</td>
-                    <td>{pigeon.Velocity}</td>
+                    <td>{parseInt(pigeon.Velocity)}</td>
                   </tr>
                 ))}
               </tbody>
