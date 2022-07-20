@@ -58,6 +58,11 @@ const pigeonSchema = new mongoose.Schema({
     required: true,
     default: null,
   },
+  strain: {
+    type: Number,
+    required: true,
+    default: 0,
+  },
   createdDate: {
     type: Date,
     required: true,
