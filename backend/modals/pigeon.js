@@ -58,7 +58,7 @@ const pigeonSchema = new mongoose.Schema({
     required: true,
     default: null,
   },
-  strain: {
+  points: {
     type: Number,
     required: true,
     default: 0,

@@ -1,18 +1,21 @@
-import React, { useEffect } from "react"
-import PigeonCard from "../shared/PigeonCard"
+import React, { useContext, useEffect } from 'react';
+import PigeonContext from '../../context/pigeons/PigeonContext';
+import PigeonCard from '../shared/PigeonCard';
 
-function Home({ pigeons, setCurrPigeon }) {
+function Home() {
+  const { getPigeons, pigeons } = useContext(PigeonContext);
+
+  useEffect(() => {
+    getPigeons();
+  }, []);
+
   return (
-    <div className="pt-10 ml-12 grid grid-cols-3 gap-5">
+    <div className='pt-10 ml-12 grid grid-cols-3 gap-5'>
       {pigeons.map((pigeon) => (
-        <PigeonCard
-          key={pigeon.id}
-          pigeon={pigeon}
-          setCurrPigeon={setCurrPigeon}
-        />
+        <PigeonCard key={pigeon._id} pigeon={pigeon} />
       ))}
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
