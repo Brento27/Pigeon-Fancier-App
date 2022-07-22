@@ -1,10 +1,10 @@
-GET http://localhost:3000/pigeons
+GET http://localhost:5000/pigeons?page=2&limit=5
 
 ###
-GET http://localhost:3000/pigeons/62d81c1f8dd2e1344edd36f3
+GET http://localhost:5000/pigeons/62d81c1f8dd2e1344edd36f3
 
 ###
-POST http://localhost:3000/pigeons
+POST http://localhost:5000/pigeons
 Content-Type: application/json
 
 {
@@ -15,10 +15,10 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/pigeons/62d81c1f8dd2e1344edd36f3
+DELETE http://localhost:5000/pigeons/62d81c1f8dd2e1344edd36f3
 
 ###
-PATCH http://localhost:3000/pigeons/62d81c1f8dd2e1344edd36f3
+PATCH http://localhost:5000/pigeons/62d81c1f8dd2e1344edd36f3
 Content-Type: application/json
 
 {
