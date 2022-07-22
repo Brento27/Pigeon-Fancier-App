@@ -12,6 +12,7 @@ function PigeonDetails() {
 
   const { getSinglePigeon, pigeon } = useContext(PigeonContext);
 
+  /* A hook that is called after every render. */
   useEffect(() => {
     getSinglePigeon(id);
     if (pigeon.sex === 'H') {

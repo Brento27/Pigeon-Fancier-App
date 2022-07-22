@@ -15,7 +15,6 @@ function About() {
           <div className='stat-value'>4</div>
           <div className='stat-desc'>2022 - 2023</div>
         </div>
-
         <div className='stat'>
           <div className='stat-title'>New Users</div>
           <div className='stat-value'>0</div>

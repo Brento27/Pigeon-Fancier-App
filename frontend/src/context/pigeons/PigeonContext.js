@@ -10,9 +10,9 @@ export const PigeonProvider = ({ children }) => {
   const [pigeon, setPigeon] = useState({});
 
   /**
-   * GetPigeons() is an async function that uses axios to make a GET request to the server, and then
-   * sets the state of the pigeons array to the response data.
-   * @returns The pigeons array.
+   * It's an async function that uses axios to make a GET request to the server, and then sets the
+   * state of the pigeons array to the response.data.
+   * @returns the pigeons array.
    */
   const getPigeons = async () => {
     try {
@@ -27,6 +27,12 @@ export const PigeonProvider = ({ children }) => {
     }
   };
 
+  /**
+   * GetSinglePigeon is an async function that takes an id as an argument, and returns a single pigeon
+   * object from the database.
+   * @param id - the id of the pigeon you want to get
+   * @returns The pigeon object.
+   */
   const getSinglePigeon = async (id) => {
     try {
       const response = await axios.get(`http://localhost:5000/pigeons/${id}`);
