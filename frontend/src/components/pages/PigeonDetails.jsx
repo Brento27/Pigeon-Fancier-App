@@ -24,11 +24,11 @@ function PigeonDetails() {
   }, [pigeonLoft]);
 
   return (
-    <div className='flex flex-col w-full lg:flex-row justify-between'>
-      <div className='grid flex-grow h-full card bg-base-300 rounded-box place-items-center mr-12'>
+    <div className='flex flex-col w-full lg:flex-row justify-between gap-12'>
+      <div className='grid flex-grow h-full card bg-base-300 rounded-box place-items-center'>
         <div className='card lg:card-side bg-base-100 shadow-xl my-12 w-4/5'>
-          <figure>
-            <img src={pigeon.img} alt={pigeon.colour} />
+          <figure className='sm:mt-12 md:mt-12 lg:mt-0'>
+            <img src={pigeon.img} alt={pigeon.colour} className='rounded' />
           </figure>
           <div className='card-body'>
             <h2 className='card-title'>

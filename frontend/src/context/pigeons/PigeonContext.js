@@ -16,10 +16,12 @@ export const PigeonProvider = ({ children }) => {
    */
   const getPigeons = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/pigeons`);
+      const response = await axios.get(
+        `http://localhost:5000/pigeons?page=1&limit=5`
+      );
 
-      setPigeons(response.data);
-      console.log(response.data);
+      setPigeons(response.data.results);
+      console.log(response.data.results);
 
       return pigeons;
     } catch (err) {

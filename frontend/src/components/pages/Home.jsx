@@ -10,7 +10,7 @@ function Home() {
   }, []);
 
   return (
-    <div className='pt-10 ml-12 grid grid-cols-3 gap-5'>
+    <div className='pt-10 mx-12 grid place-items-center xl:grid-cols-3 xl:mx-0 lg:grid-cols-2 lg:mx-6 md:grid-cols-1 sm:grid-cols-1 gap-5'>
       {pigeons.map((pigeon) => (
         <PigeonCard key={pigeon._id} pigeon={pigeon} />
       ))}

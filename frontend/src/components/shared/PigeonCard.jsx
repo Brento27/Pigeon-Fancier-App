@@ -18,7 +18,7 @@ function PigeonCard({ pigeon }) {
     }
   });
   return (
-    <div className='card w-96 bg-base-100 shadow-xl pt-8'>
+    <div className='card w-96 bg-base-100 shadow-xl pt-8 flex justify-between'>
       <figure>
         <img className='rounded-lg' src={image} alt={pigeon.colour} />
       </figure>

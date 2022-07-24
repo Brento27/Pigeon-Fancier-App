@@ -40,7 +40,7 @@ function RaceImport() {
           DROP HERE
         </div>
         <div className='flex justify-center'>
-          <div class='overflow-x-auto'>
+          <div className='overflow-x-auto'>
             <table className='<table table-zebra table-normal w-full'>
               <thead>
                 <tr>
