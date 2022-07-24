@@ -9,38 +9,41 @@ function RaceImport() {
     <div className='container'>
       <div>
         <h1 className='text-center text-4xl'>Race Import</h1>
-        <div
-          className={`p-6 my-2 mx-auto max-w-md border-2 ${
-            highlighted
-              ? 'border-lime-200 bg-gray-300 text-primary'
-              : 'border-white-600'
-          }`}
-          onDragEnter={() => {
-            setHighlighted(true);
-          }}
-          onDragLeave={() => {
-            setHighlighted(false);
-          }}
-          onDragOver={(e) => {
-            e.preventDefault();
-          }}
-          onDrop={(e) => {
-            e.preventDefault();
-            setHighlighted(false);
+        <div className='flex justify-between items-center'>
+          <div
+            className={`p-6 my-2 mx-auto w-3/4 border-2 ${
+              highlighted
+                ? 'border-lime-200 bg-gray-300 text-primary'
+                : 'border-white-600'
+            }`}
+            onDragEnter={() => {
+              setHighlighted(true);
+            }}
+            onDragLeave={() => {
+              setHighlighted(false);
+            }}
+            onDragOver={(e) => {
+              e.preventDefault();
+            }}
+            onDrop={(e) => {
+              e.preventDefault();
+              setHighlighted(false);
 
-            Array.from(e.dataTransfer.files)
-              .filter((file) => file.type === 'text/csv')
-              .forEach(async (file) => {
-                const text = await file.text();
-                const result = parse(text, { header: true });
-                if (result.data.length > 55) {
-                  result.data.splice(55, result.data.length - 55);
-                }
-                setPigeons((existing) => [...existing, ...result.data]);
-              });
-          }}
-        >
-          DROP HERE
+              Array.from(e.dataTransfer.files)
+                .filter((file) => file.type === 'text/csv')
+                .forEach(async (file) => {
+                  const text = await file.text();
+                  const result = parse(text, { header: true });
+                  if (result.data.length > 55) {
+                    result.data.splice(55, result.data.length - 55);
+                  }
+                  setPigeons((existing) => [...existing, ...result.data]);
+                });
+            }}
+          >
+            DROP CSV HERE
+          </div>
+          <button className='btn btn-accent'>Save race</button>
         </div>
         <div className='flex justify-center'>
           <div className='overflow-x-auto'>
@@ -53,7 +56,7 @@ function RaceImport() {
                   <th>RingNo</th>
                   <th>Sex</th>
                   <th>Ship</th>
-                  <th>Distance</th>
+                  <th>Distance (km. )</th>
                   <th>Var</th>
                   <th>Clock Time</th>
                   <th>To Win</th>
