@@ -33,6 +33,9 @@ function RaceImport() {
               .forEach(async (file) => {
                 const text = await file.text();
                 const result = parse(text, { header: true });
+                if (result.data.length > 55) {
+                  result.data.splice(55, result.data.length - 55);
+                }
                 setPigeons((existing) => [...existing, ...result.data]);
               });
           }}
