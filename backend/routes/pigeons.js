@@ -19,10 +19,10 @@ router.get('/:id', getPigeon, (req, res) => {
 // Creating one
 router.post('/', async (req, res) => {
   const pigeon = new Pigeon({
-    fancier: req.body.Fancier,
-    letters: req.body.Letters,
-    ringNo: req.body.RingNo,
-    sex: req.body.Sex,
+    fancier: req.body.fancier,
+    letters: req.body.letters,
+    ringNo: req.body.ringNo,
+    sex: req.body.sex,
     createdDate: req.body.createdDate,
   });
   try {

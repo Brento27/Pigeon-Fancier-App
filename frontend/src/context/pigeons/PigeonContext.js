@@ -48,6 +48,24 @@ export const PigeonProvider = ({ children }) => {
     }
   };
 
+  const createSinglePigeon = async (pigeon) => {
+    let payload = {
+      fancier: pigeon.Fancier,
+      letters: pigeon.Letters,
+      ringNo: pigeon.RingNo,
+      sex: pigeon.Sex,
+    };
+    try {
+      const res = await axios.post('http://localhost:5000/pigeons', payload, {
+        headers: { 'Content-Type': 'appliation/json' },
+      });
+
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <PigeonContext.Provider
       value={{
@@ -55,6 +73,7 @@ export const PigeonProvider = ({ children }) => {
         pigeon,
         getPigeons,
         getSinglePigeon,
+        createSinglePigeon,
       }}
     >
       {children}
