@@ -5,6 +5,10 @@ const pigeonSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  fancier: {
+    type: String,
+    required: true,
+  },
   letters: {
     type: String,
     required: true,
