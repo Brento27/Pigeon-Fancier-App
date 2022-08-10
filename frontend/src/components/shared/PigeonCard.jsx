@@ -27,6 +27,7 @@ function PigeonCard({ pigeon }) {
           {pigeon.ringNo} {pigeon.letters} {pigeon.year}
         </h2>
         <p>{pigeon.desc}</p>
+        <p>Points: {pigeon.points}</p>
         <div className='card-actions justify-end'>
           <Link to={`/my-pigeons/${pigeon._id}`}>
             <button className='btn btn-primary'>Details</button>

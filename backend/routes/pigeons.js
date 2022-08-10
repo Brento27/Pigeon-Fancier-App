@@ -25,11 +25,25 @@ router.post('/', async (req, res) => {
     sex: req.body.sex,
     createdDate: req.body.createdDate,
   });
-  try {
-    const newPigeon = await pigeon.save();
-    res.status(201).json(newPigeon);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
+
+  let matchedPigeons = [];
+  matchedPigeons = await Pigeon.find({
+    ringNo: pigeon.ringNo,
+    letters: pigeon.letters,
+  });
+  console.log(matchedPigeons);
+
+  if (matchedPigeons.length == 0) {
+    try {
+      const newPigeon = await pigeon.save();
+      res.status(201).json(newPigeon);
+    } catch (err) {
+      res.status(400).json({ message: err.message });
+    }
+  } else {
+    res
+      .status(400)
+      .json({ message: 'This pigeon already exists ' + pigeon.letters });
   }
 });
 

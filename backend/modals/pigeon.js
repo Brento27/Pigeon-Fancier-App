@@ -4,18 +4,22 @@ const pigeonSchema = new mongoose.Schema({
   loftName: {
     type: String,
     required: true,
+    default: 'N/A',
   },
   fancier: {
     type: String,
     required: true,
+    default: 'N/A',
   },
   letters: {
     type: String,
     required: true,
+    default: 'N/A',
   },
   ringNo: {
     type: String,
     required: true,
+    default: 'N/A',
   },
   sex: {
     type: String,
@@ -25,6 +29,7 @@ const pigeonSchema = new mongoose.Schema({
   year: {
     type: String,
     required: true,
+    default: '2022',
   },
   colour: {
     type: String,
@@ -34,17 +39,17 @@ const pigeonSchema = new mongoose.Schema({
   sire: {
     type: Object,
     required: true,
-    default: null,
+    default: {},
   },
   dam: {
     type: Object,
     required: true,
-    default: null,
+    default: {},
   },
   name: {
     type: String,
     required: true,
-    default: null,
+    default: 'N/A',
   },
   img: {
     type: String,
@@ -55,12 +60,12 @@ const pigeonSchema = new mongoose.Schema({
   desc: {
     type: String,
     required: true,
-    default: null,
+    default: 'N/A',
   },
   strain: {
     type: String,
     required: true,
-    default: null,
+    default: 'N/A',
   },
   points: {
     type: Number,

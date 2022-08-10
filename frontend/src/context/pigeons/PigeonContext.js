@@ -49,6 +49,7 @@ export const PigeonProvider = ({ children }) => {
   };
 
   const createSinglePigeon = async (pigeon) => {
+    console.log('context ' + pigeon.Letters);
     let payload = {
       fancier: pigeon.Fancier,
       letters: pigeon.Letters,
@@ -56,10 +57,9 @@ export const PigeonProvider = ({ children }) => {
       sex: pigeon.Sex,
     };
     try {
-      const res = await axios.post('http://localhost:5000/pigeons', payload, {
+      const res = await axios.post('http://localhost:5000/pigeons/', payload, {
         headers: { 'Content-Type': 'appliation/json' },
       });
-
       console.log(res);
     } catch (err) {
       console.log(err);

@@ -1,4 +1,4 @@
-GET http://localhost:5000/pigeons?page=2&limit=5
+GET http://localhost:5000/pigeons?page=1&limit=5
 
 ###
 GET http://localhost:5000/pigeons/62d81c1f8dd2e1344edd36f3
@@ -10,12 +10,12 @@ Content-Type: application/json
 {
     "loftName": "BlouBand",
     "letters": "ZAOPK",
-    "ringNo": "227",
+    "ringNo": "228",
     "sex": "C"
 }
 
 ###
-DELETE http://localhost:5000/pigeons/62d81c1f8dd2e1344edd36f3
+DELETE http://localhost:5000/pigeons/62f40580ee0fb7a83a6256ac
 
 ###
 PATCH http://localhost:5000/pigeons/62d81c1f8dd2e1344edd36f3

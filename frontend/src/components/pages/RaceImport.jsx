@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { parse } from 'papaparse';
+import PigeonContext from '../../context/pigeons/PigeonContext';
 
 function RaceImport() {
   const [highlighted, setHighlighted] = useState(false);
   const [pigeons, setPigeons] = useState([]);
+
+  const { createSinglePigeon } = useContext(PigeonContext);
+
+  const submitHandler = () => {
+    pigeons.map(async (pigeon) => {
+      if (pigeon.Pos === '') {
+        return console.log('empty row');
+      } else {
+        console.log(pigeon);
+        return await createSinglePigeon(pigeon);
+      }
+    });
+  };
 
   return (
     <div className='container'>
@@ -43,7 +57,9 @@ function RaceImport() {
           >
             DROP CSV HERE
           </div>
-          <button className='btn btn-accent'>Save race</button>
+          <button className='btn btn-accent' onClick={() => submitHandler()}>
+            Save race
+          </button>
         </div>
         <div className='flex justify-center'>
           <div className='overflow-x-auto'>
